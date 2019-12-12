@@ -10,6 +10,7 @@ import UIKit
 
 class FirstTableViewCell: UITableViewCell {
 
+    
     @IBOutlet weak var firstCellView: UIView!
     @IBOutlet weak var firstCellIcon: UIImageView!
     @IBOutlet weak var firstCellLabel: UILabel!

@@ -73,6 +73,7 @@
 				84ABD867239A638A00F5399B /* AppDelegate.swift */,
 				84ABD869239A638A00F5399B /* SceneDelegate.swift */,
 				84ABD86B239A638A00F5399B /* ViewController.swift */,
+				849C0EC1239FE1C4001F68B5 /* SecondDashboardViewController.swift */,
 				84ABD86D239A638A00F5399B /* Main.storyboard */,
 				84ABD870239A638D00F5399B /* Assets.xcassets */,
 				84ABD872239A638D00F5399B /* LaunchScreen.storyboard */,
@@ -81,7 +82,6 @@
 				84ABD87E239A719C00F5399B /* RoomsCollectionViewCell.xib */,
 				848CF018239E9B9E004A63A3 /* MapAndAirCollectionViewCell.swift */,
 				848CF019239E9B9F004A63A3 /* MapAndAirCollectionViewCell.xib */,
-				849C0EC1239FE1C4001F68B5 /* SecondDashboardViewController.swift */,
 				849C0EC3239FF665001F68B5 /* FirstTableViewCell.swift */,
 				849C0EC4239FF665001F68B5 /* FirstTableViewCell.xib */,
 			);
@@ -323,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Badii.Smart-Building";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -342,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Badii.Smart-Building";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
