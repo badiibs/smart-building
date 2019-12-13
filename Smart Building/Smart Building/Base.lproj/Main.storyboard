@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Br-dD-Ffu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Br-dD-Ffu">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,11 +51,42 @@
                     <connections>
                         <outlet property="collectionView" destination="YXw-e1-R0P" id="zK4-t1-lHs"/>
                         <segue destination="lgu-TT-kOU" kind="show" identifier="goToSecondDashboard" id="obI-fC-Bac"/>
+                        <segue destination="tGa-dj-Hjl" kind="show" identifier="goToAllPosition" id="lV6-aa-cyQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1009" y="117"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="6eq-Bh-QTm">
+            <objects>
+                <viewController id="tGa-dj-Hjl" customClass="MapViewController" customModule="Smart_Building" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VMa-Px-fP2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uRE-6d-a7x">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uRE-6d-a7x" firstAttribute="bottom" secondItem="cWf-H0-Dpo" secondAttribute="bottom" id="0Ac-AS-Xqj"/>
+                            <constraint firstItem="uRE-6d-a7x" firstAttribute="top" secondItem="cWf-H0-Dpo" secondAttribute="top" id="kzE-TB-Lbr"/>
+                            <constraint firstItem="uRE-6d-a7x" firstAttribute="trailing" secondItem="cWf-H0-Dpo" secondAttribute="trailing" id="lNQ-Ag-6qS"/>
+                            <constraint firstItem="uRE-6d-a7x" firstAttribute="leading" secondItem="cWf-H0-Dpo" secondAttribute="leading" id="mdO-kF-Mlt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cWf-H0-Dpo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J6A-hY-rNX"/>
+                    <connections>
+                        <outlet property="mapView" destination="uRE-6d-a7x" id="4yS-5m-Fk8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcl-kQ-gYD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1004" y="918.89055472263874"/>
         </scene>
         <!--Second Dashboard View Controller-->
         <scene sceneID="kyi-65-qDI">
@@ -92,6 +123,7 @@
                     <navigationItem key="navigationItem" id="ZH7-w7-Aqh"/>
                     <connections>
                         <outlet property="tableview" destination="LIE-Ve-5f1" id="hL6-61-oZL"/>
+                        <segue destination="tGa-dj-Hjl" kind="show" identifier="goToPosition" id="vBh-vm-67M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsL-Xq-pWR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -117,4 +149,7 @@
             <point key="canvasLocation" x="132" y="117.39130434782609"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vBh-vm-67M"/>
+    </inferredMetricsTieBreakers>
 </document>

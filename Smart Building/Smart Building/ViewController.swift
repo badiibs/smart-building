@@ -27,6 +27,10 @@ class ViewController: UIViewController {
             let destVC = segue.destination as! SecondDashboardViewController
             destVC.roomname = sender as! String
         }
+        else if segue.identifier == "goToAllPosition" {
+            let destVCC = segue.destination as! MapViewController
+            destVCC.roomName = sender as! String
+        }
     }
 
 
@@ -61,12 +65,19 @@ extension ViewController: UICollectionViewDataSource {
 extension ViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.item)
-        let nextVC = SecondDashboardViewController()
-        var room = nextVC.roomname
-        room = roomName[indexPath.item]
-        print(room)
+        if (indexPath.item < 6) {
+            print(indexPath.item)
+            let nextVC = SecondDashboardViewController()
+            var room = nextVC.roomname
+            room = roomName[indexPath.item]
+            print(room)
+            performSegue(withIdentifier: "goToSecondDashboard", sender: room)
+        } else if indexPath.item == 6 {
+            let nextVC = MapViewController()
+            var room = nextVC.roomName
+            room = roomName[indexPath.item]
+            performSegue(withIdentifier: "goToAllPosition", sender: room)
+        }
         
-        performSegue(withIdentifier: "goToSecondDashboard", sender: room)
     }
 }

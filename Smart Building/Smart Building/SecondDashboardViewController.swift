@@ -39,8 +39,16 @@ class SecondDashboardViewController: UIViewController {
         print("\(roomname) this is me")
         updateCellArray()
         tableview.dataSource = self
+        tableview.delegate = self
         tableview.register(UINib(nibName: "FirstTableViewCell", bundle: nil), forCellReuseIdentifier: "firstCell")
 
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToPosition" {
+            let destVCC = segue.destination as! MapViewController
+            destVCC.roomName = sender as! String
+        }
     }
     
     func updateCellArray() {
@@ -87,4 +95,14 @@ extension SecondDashboardViewController: UITableViewDataSource{
     }
     
     
+}
+extension SecondDashboardViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if cellTitleLabel[indexPath.item] == "Position" {
+          let nextVC = MapViewController()
+          var room = nextVC.roomName
+          room = roomname
+            performSegue(withIdentifier: "goToPosition", sender: room)
+        }
+    }
 }

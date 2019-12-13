@@ -20,6 +20,7 @@
 		84ABD874239A638D00F5399B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ABD872239A638D00F5399B /* LaunchScreen.storyboard */; };
 		84ABD87F239A719C00F5399B /* RoomsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABD87D239A719C00F5399B /* RoomsCollectionViewCell.swift */; };
 		84ABD880239A719C00F5399B /* RoomsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84ABD87E239A719C00F5399B /* RoomsCollectionViewCell.xib */; };
+		84BDE27F23A38DA9009A3545 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDE27E23A38DA9009A3545 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		84ABD875239A638D00F5399B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84ABD87D239A719C00F5399B /* RoomsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsCollectionViewCell.swift; sourceTree = "<group>"; };
 		84ABD87E239A719C00F5399B /* RoomsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomsCollectionViewCell.xib; sourceTree = "<group>"; };
+		84BDE27E23A38DA9009A3545 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				84ABD869239A638A00F5399B /* SceneDelegate.swift */,
 				84ABD86B239A638A00F5399B /* ViewController.swift */,
 				849C0EC1239FE1C4001F68B5 /* SecondDashboardViewController.swift */,
+				84BDE27E23A38DA9009A3545 /* MapViewController.swift */,
 				84ABD86D239A638A00F5399B /* Main.storyboard */,
 				84ABD870239A638D00F5399B /* Assets.xcassets */,
 				84ABD872239A638D00F5399B /* LaunchScreen.storyboard */,
@@ -169,6 +172,7 @@
 				848CF01A239E9B9F004A63A3 /* MapAndAirCollectionViewCell.swift in Sources */,
 				84ABD87F239A719C00F5399B /* RoomsCollectionViewCell.swift in Sources */,
 				849C0EC5239FF665001F68B5 /* FirstTableViewCell.swift in Sources */,
+				84BDE27F23A38DA9009A3545 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
