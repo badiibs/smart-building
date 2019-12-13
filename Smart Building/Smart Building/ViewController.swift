@@ -22,6 +22,12 @@ class ViewController: UIViewController {
         collectionView.register(UINib(nibName: "RoomsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "roomCell")
         collectionView.register(UINib(nibName: "MapAndAirCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "extraCell")
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSecondDashboard" {
+            let destVC = segue.destination as! SecondDashboardViewController
+            destVC.roomname = sender as! String
+        }
+    }
 
 
 }
@@ -41,6 +47,11 @@ extension ViewController: UICollectionViewDataSource {
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "extraCell", for: indexPath) as! MapAndAirCollectionViewCell
             cell.title.text = room
+            if indexPath.item == 6 {
+                cell.imageView.image = UIImage(named: "localisation")
+            } else {
+                 cell.imageView.image = UIImage(named: "air conditioner")
+            }
             cell.roomExtraCellView.layer.cornerRadius = 10
             return cell
         }
@@ -51,6 +62,11 @@ extension ViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
-        performSegue(withIdentifier: "goToSecondDashboard", sender: self)
+        let nextVC = SecondDashboardViewController()
+        var room = nextVC.roomname
+        room = roomName[indexPath.item]
+        print(room)
+        
+        performSegue(withIdentifier: "goToSecondDashboard", sender: room)
     }
 }
