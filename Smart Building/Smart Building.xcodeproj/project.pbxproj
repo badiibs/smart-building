@@ -12,6 +12,7 @@
 		849C0EC2239FE1C4001F68B5 /* SecondDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C0EC1239FE1C4001F68B5 /* SecondDashboardViewController.swift */; };
 		849C0EC5239FF665001F68B5 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C0EC3239FF665001F68B5 /* FirstTableViewCell.swift */; };
 		849C0EC6239FF665001F68B5 /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849C0EC4239FF665001F68B5 /* FirstTableViewCell.xib */; };
+		84ABA32323A8DBEB00287BCF /* AirCondData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABA32223A8DBEB00287BCF /* AirCondData.swift */; };
 		84ABD868239A638A00F5399B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABD867239A638A00F5399B /* AppDelegate.swift */; };
 		84ABD86A239A638A00F5399B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABD869239A638A00F5399B /* SceneDelegate.swift */; };
 		84ABD86C239A638A00F5399B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABD86B239A638A00F5399B /* ViewController.swift */; };
@@ -21,14 +22,20 @@
 		84ABD87F239A719C00F5399B /* RoomsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABD87D239A719C00F5399B /* RoomsCollectionViewCell.swift */; };
 		84ABD880239A719C00F5399B /* RoomsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84ABD87E239A719C00F5399B /* RoomsCollectionViewCell.xib */; };
 		84BDE27F23A38DA9009A3545 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDE27E23A38DA9009A3545 /* MapViewController.swift */; };
+		84CF6C6D23A7992D007D2C8B /* WeatherStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF6C6C23A7992D007D2C8B /* WeatherStation.swift */; };
+		84CF6C6F23A7CDF4007D2C8B /* AirCondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF6C6E23A7CDF4007D2C8B /* AirCondViewController.swift */; };
+		F6514F90ABDC86F6AA797034 /* Pods_Smart_Building.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29C24A1EFA033505D7502A1 /* Pods_Smart_Building.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0253B980D3EDCCEFF7BD33CC /* Pods-Smart Building.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Building.debug.xcconfig"; path = "Target Support Files/Pods-Smart Building/Pods-Smart Building.debug.xcconfig"; sourceTree = "<group>"; };
+		5B915FF064CC4B4622027EDF /* Pods-Smart Building.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Building.release.xcconfig"; path = "Target Support Files/Pods-Smart Building/Pods-Smart Building.release.xcconfig"; sourceTree = "<group>"; };
 		848CF018239E9B9E004A63A3 /* MapAndAirCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAndAirCollectionViewCell.swift; sourceTree = "<group>"; };
 		848CF019239E9B9F004A63A3 /* MapAndAirCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapAndAirCollectionViewCell.xib; sourceTree = "<group>"; };
 		849C0EC1239FE1C4001F68B5 /* SecondDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDashboardViewController.swift; sourceTree = "<group>"; };
 		849C0EC3239FF665001F68B5 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
 		849C0EC4239FF665001F68B5 /* FirstTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
+		84ABA32223A8DBEB00287BCF /* AirCondData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirCondData.swift; sourceTree = "<group>"; };
 		84ABD864239A638A00F5399B /* Smart Building.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Building.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84ABD867239A638A00F5399B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84ABD869239A638A00F5399B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +47,9 @@
 		84ABD87D239A719C00F5399B /* RoomsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsCollectionViewCell.swift; sourceTree = "<group>"; };
 		84ABD87E239A719C00F5399B /* RoomsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomsCollectionViewCell.xib; sourceTree = "<group>"; };
 		84BDE27E23A38DA9009A3545 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		84CF6C6C23A7992D007D2C8B /* WeatherStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherStation.swift; path = "Smart Building/Model/Rooms/WeatherStation.swift"; sourceTree = SOURCE_ROOT; };
+		84CF6C6E23A7CDF4007D2C8B /* AirCondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirCondViewController.swift; sourceTree = "<group>"; };
+		C29C24A1EFA033505D7502A1 /* Pods_Smart_Building.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Building.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6514F90ABDC86F6AA797034 /* Pods_Smart_Building.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0393B0EE09BA9336B458FDDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C29C24A1EFA033505D7502A1 /* Pods_Smart_Building.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		06AF8B101303737806A04B6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0253B980D3EDCCEFF7BD33CC /* Pods-Smart Building.debug.xcconfig */,
+				5B915FF064CC4B4622027EDF /* Pods-Smart Building.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		84ABD85B239A638A00F5399B = {
 			isa = PBXGroup;
 			children = (
 				84ABD866239A638A00F5399B /* Smart Building */,
 				84ABD865239A638A00F5399B /* Products */,
+				06AF8B101303737806A04B6A /* Pods */,
+				0393B0EE09BA9336B458FDDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,23 +102,66 @@
 		84ABD866239A638A00F5399B /* Smart Building */ = {
 			isa = PBXGroup;
 			children = (
+				84CF6C6523A78E1A007D2C8B /* Model */,
+				84CF6C6623A78E2E007D2C8B /* View */,
+				84CF6C6723A78E38007D2C8B /* Controller */,
 				84ABD867239A638A00F5399B /* AppDelegate.swift */,
 				84ABD869239A638A00F5399B /* SceneDelegate.swift */,
-				84ABD86B239A638A00F5399B /* ViewController.swift */,
-				849C0EC1239FE1C4001F68B5 /* SecondDashboardViewController.swift */,
-				84BDE27E23A38DA9009A3545 /* MapViewController.swift */,
-				84ABD86D239A638A00F5399B /* Main.storyboard */,
 				84ABD870239A638D00F5399B /* Assets.xcassets */,
 				84ABD872239A638D00F5399B /* LaunchScreen.storyboard */,
 				84ABD875239A638D00F5399B /* Info.plist */,
-				84ABD87D239A719C00F5399B /* RoomsCollectionViewCell.swift */,
-				84ABD87E239A719C00F5399B /* RoomsCollectionViewCell.xib */,
-				848CF018239E9B9E004A63A3 /* MapAndAirCollectionViewCell.swift */,
-				848CF019239E9B9F004A63A3 /* MapAndAirCollectionViewCell.xib */,
-				849C0EC3239FF665001F68B5 /* FirstTableViewCell.swift */,
-				849C0EC4239FF665001F68B5 /* FirstTableViewCell.xib */,
 			);
 			path = "Smart Building";
+			sourceTree = "<group>";
+		};
+		84CF6C6523A78E1A007D2C8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84CF6C6923A78F55007D2C8B /* Rooms */,
+				84CF6C6823A78EEA007D2C8B /* Cells */,
+				84ABA32223A8DBEB00287BCF /* AirCondData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84CF6C6623A78E2E007D2C8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84ABD86D239A638A00F5399B /* Main.storyboard */,
+				849C0EC4239FF665001F68B5 /* FirstTableViewCell.xib */,
+				848CF019239E9B9F004A63A3 /* MapAndAirCollectionViewCell.xib */,
+				84ABD87E239A719C00F5399B /* RoomsCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84CF6C6723A78E38007D2C8B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84ABD86B239A638A00F5399B /* ViewController.swift */,
+				849C0EC1239FE1C4001F68B5 /* SecondDashboardViewController.swift */,
+				84BDE27E23A38DA9009A3545 /* MapViewController.swift */,
+				84CF6C6E23A7CDF4007D2C8B /* AirCondViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84CF6C6823A78EEA007D2C8B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				849C0EC3239FF665001F68B5 /* FirstTableViewCell.swift */,
+				848CF018239E9B9E004A63A3 /* MapAndAirCollectionViewCell.swift */,
+				84ABD87D239A719C00F5399B /* RoomsCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		84CF6C6923A78F55007D2C8B /* Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				84CF6C6C23A7992D007D2C8B /* WeatherStation.swift */,
+			);
+			path = Rooms;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +171,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84ABD878239A638D00F5399B /* Build configuration list for PBXNativeTarget "Smart Building" */;
 			buildPhases = (
+				F66A33C4A351D07F47F59691 /* [CP] Check Pods Manifest.lock */,
 				84ABD860239A638A00F5399B /* Sources */,
 				84ABD861239A638A00F5399B /* Frameworks */,
 				84ABD862239A638A00F5399B /* Resources */,
@@ -160,6 +234,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F66A33C4A351D07F47F59691 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart Building-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84ABD860239A638A00F5399B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -169,9 +268,12 @@
 				84ABD86C239A638A00F5399B /* ViewController.swift in Sources */,
 				84ABD868239A638A00F5399B /* AppDelegate.swift in Sources */,
 				84ABD86A239A638A00F5399B /* SceneDelegate.swift in Sources */,
+				84ABA32323A8DBEB00287BCF /* AirCondData.swift in Sources */,
 				848CF01A239E9B9F004A63A3 /* MapAndAirCollectionViewCell.swift in Sources */,
 				84ABD87F239A719C00F5399B /* RoomsCollectionViewCell.swift in Sources */,
 				849C0EC5239FF665001F68B5 /* FirstTableViewCell.swift in Sources */,
+				84CF6C6F23A7CDF4007D2C8B /* AirCondViewController.swift in Sources */,
+				84CF6C6D23A7992D007D2C8B /* WeatherStation.swift in Sources */,
 				84BDE27F23A38DA9009A3545 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +416,7 @@
 		};
 		84ABD879239A638D00F5399B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0253B980D3EDCCEFF7BD33CC /* Pods-Smart Building.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -333,6 +436,7 @@
 		};
 		84ABD87A239A638D00F5399B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B915FF064CC4B4622027EDF /* Pods-Smart Building.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

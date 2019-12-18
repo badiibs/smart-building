@@ -52,11 +52,56 @@
                         <outlet property="collectionView" destination="YXw-e1-R0P" id="zK4-t1-lHs"/>
                         <segue destination="lgu-TT-kOU" kind="show" identifier="goToSecondDashboard" id="obI-fC-Bac"/>
                         <segue destination="tGa-dj-Hjl" kind="show" identifier="goToAllPosition" id="lV6-aa-cyQ"/>
+                        <segue destination="oFG-HP-qmP" kind="show" identifier="goToAirCond" id="jJV-JA-z1J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1009" y="117"/>
+        </scene>
+        <!--Air Cond View Controller-->
+        <scene sceneID="YM2-r4-GNN">
+            <objects>
+                <viewController id="oFG-HP-qmP" customClass="AirCondViewController" customModule="Smart_Building" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z9p-FQ-sau">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qH-x6-WMH">
+                                <rect key="frame" x="107.5" y="253.5" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="98z-xC-csM"/>
+                                    <constraint firstAttribute="height" constant="160" id="yHU-dl-j1f"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="powerButtonPressed" destination="oFG-HP-qmP" eventType="touchUpInside" id="0yk-8f-VYE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsO-26-nZE">
+                                <rect key="frame" x="153" y="453.5" width="69" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5qH-x6-WMH" firstAttribute="centerX" secondItem="Z9p-FQ-sau" secondAttribute="centerX" id="7Yb-fZ-Ke4"/>
+                            <constraint firstItem="bsO-26-nZE" firstAttribute="centerX" secondItem="Z9p-FQ-sau" secondAttribute="centerX" id="iQK-kr-nYR"/>
+                            <constraint firstItem="bsO-26-nZE" firstAttribute="top" secondItem="5qH-x6-WMH" secondAttribute="bottom" constant="40" id="m0d-G3-98Z"/>
+                            <constraint firstItem="5qH-x6-WMH" firstAttribute="centerY" secondItem="Z9p-FQ-sau" secondAttribute="centerY" id="zEo-ha-HhZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DnN-ib-9Ef"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iue-6H-mH6"/>
+                    <connections>
+                        <outlet property="powerButton" destination="5qH-x6-WMH" id="ydf-vP-QG7"/>
+                        <outlet property="stateLabel" destination="bsO-26-nZE" id="zej-5I-Rgl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g5H-HK-AIX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.399999999999999" y="946.77661169415296"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="6eq-Bh-QTm">
@@ -86,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcl-kQ-gYD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1004" y="918.89055472263874"/>
+            <point key="canvasLocation" x="791" y="947"/>
         </scene>
         <!--Second Dashboard View Controller-->
         <scene sceneID="kyi-65-qDI">
@@ -150,6 +195,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vBh-vm-67M"/>
+        <segue reference="lV6-aa-cyQ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,6 +13,7 @@ class SecondDashboardViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     var roomname = ""
     
+    var weatherStation = WeatherStation()
     //Cell Arrays
     var cellIconsTable: [String] = []
       var cellTitleLabel: [String] = []
@@ -21,27 +22,25 @@ class SecondDashboardViewController: UIViewController {
     //Weather Station arrays
     let weatherStationIconsTable = ["temperature","humidity","rainfull","speed","direction","time","position"]
     let weatherStationTitleLabel = ["Temperature","Humidity","Rainfull","Speed","Direction","12:15:15 17 12 12","Position"]
-    var weatherstationDeviceValues = ["12","13","14","15","14","",""]
+    var weatherstationDeviceValues: [String] = []
     
     //Green Land arrays
     let greenLandIconsTable = ["temperature","humidity","moisture","water sensor","battery","time","position"]
     let greenLandTitleLabel = ["Temperature","Humidity","Moisture","Water Sensor","Battery","12:15:15 17 12 12","Position"]
-    var greenLandDeviceValues = ["12","13","14","15","14","",""]
+    var greenLandDeviceValues: [String] = []
     
     //Smart Water arrays
     let smartWaterIconsTable = ["temperature","humidity","co2","ph","conductivity","luminosity","battery","time","position"]
     let smartWaterTitleLabel = ["Temperature","Humidity","CO2","pH Meter","Conductivity","Luminosity","Battery","12:15:15 17 12 12","Position"]
-    var smartWaterDeviceValues = ["12","13","14","15","14","17","20","",""]
+    var smartWaterDeviceValues: [String] = []
   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(roomname) this is me")
         updateCellArray()
         tableview.dataSource = self
         tableview.delegate = self
         tableview.register(UINib(nibName: "FirstTableViewCell", bundle: nil), forCellReuseIdentifier: "firstCell")
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -61,17 +60,22 @@ class SecondDashboardViewController: UIViewController {
             print("error updating Cell Array")
         }
     }
+    
     func weatherStationTabs() {
+        weatherStation.updateValues()
+        weatherstationDeviceValues = [String(weatherStation.temperature), String(weatherStation.humidity),String(weatherStation.rainfall),String(weatherStation.speed),String(weatherStation.direction),"",""]
       cellIconsTable = weatherStationIconsTable
       cellTitleLabel = weatherStationTitleLabel
       cellDeviceValue = weatherstationDeviceValues
        
     }
+    
     func greenLandArrays() {
         cellIconsTable = greenLandIconsTable
         cellTitleLabel = greenLandTitleLabel
         cellDeviceValue = greenLandDeviceValues
     }
+    
     func smartWaterArrays(){
         cellIconsTable = smartWaterIconsTable
         cellTitleLabel = smartWaterTitleLabel
@@ -89,7 +93,7 @@ extension SecondDashboardViewController: UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath) as! FirstTableViewCell
         cell.firstCellIcon.image = UIImage(named: "\(cellIconsTable[indexPath.row])")
         cell.firstCellLabel.text = cellTitleLabel[indexPath.row]
-        cell.firstCellValueLabel.text = cellDeviceValue[indexPath.row]
+        cell.firstCellValueLabel.text = String(cellDeviceValue[indexPath.row])
         cell.firstCellView.layer.cornerRadius = 10
         return cell
     }

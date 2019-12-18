@@ -31,6 +31,9 @@ class ViewController: UIViewController {
             let destVCC = segue.destination as! MapViewController
             destVCC.roomName = sender as! String
         }
+//        else if segue.identifier == "goToAirCond" {
+//            let destVC = segue.destination as! AirCondViewController
+//        }
     }
 
 
@@ -77,6 +80,8 @@ extension ViewController: UICollectionViewDelegate {
             var room = nextVC.roomName
             room = roomName[indexPath.item]
             performSegue(withIdentifier: "goToAllPosition", sender: room)
+        } else if indexPath.item == 7 {
+            performSegue(withIdentifier: "goToAirCond", sender: self)
         }
         
     }
