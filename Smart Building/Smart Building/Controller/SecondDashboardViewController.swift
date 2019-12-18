@@ -9,17 +9,23 @@
 import UIKit
 
 class SecondDashboardViewController: UIViewController {
-
     @IBOutlet weak var tableview: UITableView!
     var roomname = ""
     
-    var weatherStation = WeatherStation()
     //Cell Arrays
     var cellIconsTable: [String] = []
       var cellTitleLabel: [String] = []
       var cellDeviceValue: [String] = []
-    
+   //Weather Station variables
+    var wStTemperature: Double = 0.0
+    var wStHumidity: Double = 0.0
+    var wStDirection: Int = 0
+            var wStRainfall: Int = 0
+            var wStSpeed: Int = 0
+            var wStTime: String = ""
     //Weather Station arrays
+    let urlWStGet =  "http://159.8.95.102/api/devices/getDeviceLast?applicationID=2"
+
     let weatherStationIconsTable = ["temperature","humidity","rainfull","speed","direction","time","position"]
     let weatherStationTitleLabel = ["Temperature","Humidity","Rainfull","Speed","Direction","12:15:15 17 12 12","Position"]
     var weatherstationDeviceValues: [String] = []
@@ -33,6 +39,9 @@ class SecondDashboardViewController: UIViewController {
     let smartWaterIconsTable = ["temperature","humidity","co2","ph","conductivity","luminosity","battery","time","position"]
     let smartWaterTitleLabel = ["Temperature","Humidity","CO2","pH Meter","Conductivity","Luminosity","Battery","12:15:15 17 12 12","Position"]
     var smartWaterDeviceValues: [String] = []
+    
+
+    
   
     
     override func viewDidLoad() {
@@ -62,11 +71,16 @@ class SecondDashboardViewController: UIViewController {
     }
     
     func weatherStationTabs() {
-        weatherStation.updateValues()
-        weatherstationDeviceValues = [String(weatherStation.temperature), String(weatherStation.humidity),String(weatherStation.rainfall),String(weatherStation.speed),String(weatherStation.direction),"",""]
+        performRequest(urlString: urlWStGet)
+        wait()
+        
+        weatherstationDeviceValues = ["\(wStTemperature) °C", "\(wStHumidity) %",String(wStRainfall),String(wStSpeed),String(wStDirection),"",""]
+        
       cellIconsTable = weatherStationIconsTable
       cellTitleLabel = weatherStationTitleLabel
+        cellTitleLabel[5] = wStTime
       cellDeviceValue = weatherstationDeviceValues
+        
        
     }
     
@@ -82,7 +96,44 @@ class SecondDashboardViewController: UIViewController {
         cellDeviceValue = smartWaterDeviceValues
     }
     
+//Weather Station Request
+    func performRequest(urlString: String) {
+           if let url = URL(string: urlString) {
+               let session = URLSession(configuration: .default)
+               let task = session.dataTask(with: url) { (data, response, error) in
+                   if error != nil {
+                       print(error!)
+                       return
+                   }
+                   if let safeData = data {
+                      self.parseJSON(deviceData: safeData)
+                   }
+               }
+               task.resume()
+           }
+       }
 
+       func parseJSON(deviceData: Data) {
+           let decoder = JSONDecoder()
+           do {
+               let decodedData = try decoder.decode(WeatherStation.self, from: deviceData)
+               wStTemperature = decodedData.object.Temperature
+            wStHumidity = decodedData.object.RH
+            wStRainfall = decodedData.object.rainfall
+            wStSpeed = decodedData.object.speed
+            wStDirection = decodedData.object.direction
+            wStTime = decodedData.object.Time
+
+           } catch {
+               print(error)
+           }
+       }
+    
+     func wait(){
+            do {
+                sleep(1)
+            }
+        }
 }
 extension SecondDashboardViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -98,6 +149,7 @@ extension SecondDashboardViewController: UITableViewDataSource{
         return cell
     }
     
+   
     
 }
 extension SecondDashboardViewController: UITableViewDelegate{
@@ -110,3 +162,5 @@ extension SecondDashboardViewController: UITableViewDelegate{
         }
     }
 }
+
+
