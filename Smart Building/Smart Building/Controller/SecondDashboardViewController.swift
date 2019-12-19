@@ -11,7 +11,7 @@ import UIKit
 class SecondDashboardViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     var roomname = ""
-    
+    var nextTemperature = 0.0
     //Cell Arrays
     var cellIconsTable: [String] = []
       var cellTitleLabel: [String] = []
@@ -74,6 +74,10 @@ class SecondDashboardViewController: UIViewController {
             let destVCC = segue.destination as! MapViewController
             destVCC.roomName = sender as! String
         }
+        else if segue.identifier == "goToChart" {
+            let destVC = segue.destination as! ChartViewController
+            destVC.temperature = sender as! Double
+        }
     }
     
     func updateCellArray() {
@@ -90,7 +94,6 @@ class SecondDashboardViewController: UIViewController {
     func weatherStationTabs() {
         performRequest(urlString: urlWStGet, deviceName: "Weather Station")
         wait()
-        
         weatherstationDeviceValues = ["\(wStTemperature) °C", "\(wStHumidity) %",String(wStRainfall),String(wStSpeed),String(wStDirection),"",""]
         
       cellIconsTable = weatherStationIconsTable
@@ -146,6 +149,7 @@ class SecondDashboardViewController: UIViewController {
             case "Weather Station":
                  let decodedData = try decoder.decode(WeatherStation.self, from: deviceData)
                               wStTemperature = decodedData.object.Temperature
+                            nextTemperature = Double(wStTemperature) as! Double
                            wStHumidity = decodedData.object.RH
                            wStRainfall = decodedData.object.rainfall
                            wStSpeed = decodedData.object.speed
@@ -155,6 +159,7 @@ class SecondDashboardViewController: UIViewController {
             case "Landa LoRa":
                 let decodedData = try decoder.decode(LandaLora.self, from: deviceData)
                 gLTemperature = decodedData.object.Temperature
+                nextTemperature = Double(gLTemperature) as! Double
                 gLHumidity = decodedData.object.Humidity
                 gLMoisture = decodedData.object.Moisture
                 gLWaterSensor = decodedData.object.WaterSensor
@@ -164,6 +169,7 @@ class SecondDashboardViewController: UIViewController {
                 let decodedData = try decoder.decode(WorkSpace.self, from: deviceData)
                 print("work space temperature is :\(wSpTemperature)")
                 wSpTemperature = decodedData.object.temperature
+                nextTemperature = Double(wSpTemperature) as! Double
                 wSpHumidity = decodedData.object.humidity
                 wSpPressure = decodedData.object.pressure
                 wSpTime = decodedData.object.Time
@@ -211,6 +217,14 @@ extension SecondDashboardViewController: UITableViewDelegate{
           var room = nextVC.roomName
           room = roomname
             performSegue(withIdentifier: "goToPosition", sender: room)
+        }
+        else if cellTitleLabel[indexPath.item] == "Temperature" {
+              let nextVC = ChartViewController()
+              //var room = nextVC.roomName
+              var temperature = nextVC.temperature
+              //room = roomname
+              temperature = nextTemperature
+                performSegue(withIdentifier: "goToChart", sender: temperature)
         }
     }
 }

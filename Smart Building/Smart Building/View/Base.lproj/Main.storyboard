@@ -169,6 +169,7 @@
                     <connections>
                         <outlet property="tableview" destination="LIE-Ve-5f1" id="hL6-61-oZL"/>
                         <segue destination="tGa-dj-Hjl" kind="show" identifier="goToPosition" id="vBh-vm-67M"/>
+                        <segue destination="949-O4-SLF" kind="show" identifier="goToChart" id="B9J-3Q-xal"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsL-Xq-pWR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -192,6 +193,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ei2-AT-aMi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="117.39130434782609"/>
+        </scene>
+        <!--Chart View Controller-->
+        <scene sceneID="5Fg-Lt-oGG">
+            <objects>
+                <viewController id="949-O4-SLF" customClass="ChartViewController" customModule="Smart_Building" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FpS-Ye-4wu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C41-bh-9xE">
+                                <rect key="frame" x="0.0" y="266" width="375" height="401"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="22.2 °C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7w-RY-zNr">
+                                <rect key="frame" x="16" y="95" width="343" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="KkB-dF-A93"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Oy4-4g-Gdy"/>
+                    <connections>
+                        <outlet property="ourView" destination="C41-bh-9xE" id="oSt-Fx-zmV"/>
+                        <outlet property="temperatureLabel" destination="F7w-RY-zNr" id="rs0-pc-LEm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyg-xJ-ILf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1992.8" y="923.38830584707648"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

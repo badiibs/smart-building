@@ -14,6 +14,7 @@
 		849C0EC6239FF665001F68B5 /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849C0EC4239FF665001F68B5 /* FirstTableViewCell.xib */; };
 		849E130A23AB797000EB32EF /* LandaLoRa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E130923AB797000EB32EF /* LandaLoRa.swift */; };
 		849E130C23AB850900EB32EF /* WorkSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E130B23AB850900EB32EF /* WorkSpace.swift */; };
+		849E130E23ABE84400EB32EF /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E130D23ABE84400EB32EF /* ChartViewController.swift */; };
 		84ABA32323A8DBEB00287BCF /* AirCondData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABA32223A8DBEB00287BCF /* AirCondData.swift */; };
 		84ABD868239A638A00F5399B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABD867239A638A00F5399B /* AppDelegate.swift */; };
 		84ABD86A239A638A00F5399B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABD869239A638A00F5399B /* SceneDelegate.swift */; };
@@ -39,6 +40,7 @@
 		849C0EC4239FF665001F68B5 /* FirstTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
 		849E130923AB797000EB32EF /* LandaLoRa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandaLoRa.swift; sourceTree = "<group>"; };
 		849E130B23AB850900EB32EF /* WorkSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpace.swift; sourceTree = "<group>"; };
+		849E130D23ABE84400EB32EF /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		84ABA32223A8DBEB00287BCF /* AirCondData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirCondData.swift; sourceTree = "<group>"; };
 		84ABD864239A638A00F5399B /* Smart Building.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Building.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84ABD867239A638A00F5399B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				849C0EC1239FE1C4001F68B5 /* SecondDashboardViewController.swift */,
 				84BDE27E23A38DA9009A3545 /* MapViewController.swift */,
 				84CF6C6E23A7CDF4007D2C8B /* AirCondViewController.swift */,
+				849E130D23ABE84400EB32EF /* ChartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				84ABD860239A638A00F5399B /* Sources */,
 				84ABD861239A638A00F5399B /* Frameworks */,
 				84ABD862239A638A00F5399B /* Resources */,
+				62E8149704F5713609CE4053 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,6 +245,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		62E8149704F5713609CE4053 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Building/Pods-Smart Building-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Building/Pods-Smart Building-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smart Building/Pods-Smart Building-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F66A33C4A351D07F47F59691 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -271,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				849C0EC2239FE1C4001F68B5 /* SecondDashboardViewController.swift in Sources */,
+				849E130E23ABE84400EB32EF /* ChartViewController.swift in Sources */,
 				84ABD86C239A638A00F5399B /* ViewController.swift in Sources */,
 				84ABD868239A638A00F5399B /* AppDelegate.swift in Sources */,
 				84ABD86A239A638A00F5399B /* SceneDelegate.swift in Sources */,
