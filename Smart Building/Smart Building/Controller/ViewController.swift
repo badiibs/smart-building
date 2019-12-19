@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let roomName = ["Weather Station","Green Land","Smart Water","Workspace","Salle System","Salle Reunion", "Localisation","Air Conditioner"]
+    let roomName = ["Weather Station","Landa LoRa","Smart Water","Work Space","Salle System","Salle Reunion", "Localisation","Air Conditioner"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

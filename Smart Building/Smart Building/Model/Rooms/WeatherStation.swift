@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
  
-struct WeatherStation: Decodable {
+struct WeatherStation: Codable {
     struct object: Codable {
         let Temperature: Double
         let RH: Double

@@ -68,7 +68,7 @@ class MapViewController: UIViewController {
      
     func addGLAnnotation(){
                 let greenLandAnnotation = MKPointAnnotation()
-                greenLandAnnotation.title = "Green Land"
+                greenLandAnnotation.title = "Landa LoRa"
                 greenLandAnnotation.coordinate = CLLocationCoordinate2D(latitude:36.85427724347005 , longitude:10.209838299117497)
                 mapView.addAnnotation(greenLandAnnotation)
                    }
@@ -111,9 +111,9 @@ class MapViewController: UIViewController {
             switch roomName {
             case "Localisation": addAllAnnotations()
             case "Weather Station": addWeatherSAnnotation()
-            case "Green Land": addGLAnnotation()
+            case "Landa LoRa": addGLAnnotation()
             case "Smart Water": addSWAnnotation()
-            case "Workspace": addWorkSAnnotation()
+            case "Work Space": addWorkSAnnotation()
             case "System Room": addSRAnnotation()
             case "Meeting Rooom": addMRAnnotation()
             default:

@@ -12,6 +12,8 @@
 		849C0EC2239FE1C4001F68B5 /* SecondDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C0EC1239FE1C4001F68B5 /* SecondDashboardViewController.swift */; };
 		849C0EC5239FF665001F68B5 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C0EC3239FF665001F68B5 /* FirstTableViewCell.swift */; };
 		849C0EC6239FF665001F68B5 /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849C0EC4239FF665001F68B5 /* FirstTableViewCell.xib */; };
+		849E130A23AB797000EB32EF /* LandaLoRa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E130923AB797000EB32EF /* LandaLoRa.swift */; };
+		849E130C23AB850900EB32EF /* WorkSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E130B23AB850900EB32EF /* WorkSpace.swift */; };
 		84ABA32323A8DBEB00287BCF /* AirCondData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABA32223A8DBEB00287BCF /* AirCondData.swift */; };
 		84ABD868239A638A00F5399B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABD867239A638A00F5399B /* AppDelegate.swift */; };
 		84ABD86A239A638A00F5399B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABD869239A638A00F5399B /* SceneDelegate.swift */; };
@@ -35,6 +37,8 @@
 		849C0EC1239FE1C4001F68B5 /* SecondDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDashboardViewController.swift; sourceTree = "<group>"; };
 		849C0EC3239FF665001F68B5 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
 		849C0EC4239FF665001F68B5 /* FirstTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
+		849E130923AB797000EB32EF /* LandaLoRa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandaLoRa.swift; sourceTree = "<group>"; };
+		849E130B23AB850900EB32EF /* WorkSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpace.swift; sourceTree = "<group>"; };
 		84ABA32223A8DBEB00287BCF /* AirCondData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirCondData.swift; sourceTree = "<group>"; };
 		84ABD864239A638A00F5399B /* Smart Building.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Building.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84ABD867239A638A00F5399B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				84CF6C6C23A7992D007D2C8B /* WeatherStation.swift */,
+				849E130923AB797000EB32EF /* LandaLoRa.swift */,
+				849E130B23AB850900EB32EF /* WorkSpace.swift */,
 			);
 			path = Rooms;
 			sourceTree = "<group>";
@@ -268,12 +274,14 @@
 				84ABD86C239A638A00F5399B /* ViewController.swift in Sources */,
 				84ABD868239A638A00F5399B /* AppDelegate.swift in Sources */,
 				84ABD86A239A638A00F5399B /* SceneDelegate.swift in Sources */,
+				849E130A23AB797000EB32EF /* LandaLoRa.swift in Sources */,
 				84ABA32323A8DBEB00287BCF /* AirCondData.swift in Sources */,
 				848CF01A239E9B9F004A63A3 /* MapAndAirCollectionViewCell.swift in Sources */,
 				84ABD87F239A719C00F5399B /* RoomsCollectionViewCell.swift in Sources */,
 				849C0EC5239FF665001F68B5 /* FirstTableViewCell.swift in Sources */,
 				84CF6C6F23A7CDF4007D2C8B /* AirCondViewController.swift in Sources */,
 				84CF6C6D23A7992D007D2C8B /* WeatherStation.swift in Sources */,
+				849E130C23AB850900EB32EF /* WorkSpace.swift in Sources */,
 				84BDE27F23A38DA9009A3545 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
