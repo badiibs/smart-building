@@ -172,6 +172,10 @@ extension ViewController: UICollectionViewDataSource {
             cell.roomPression.text = pressure
             
             cell.roomCellsView.layer.cornerRadius = 10
+            cell.roomCellsView.layer.borderWidth = 3.0
+            cell.roomCellsView.layer.borderColor = UIColor.black.cgColor
+//            cell.layer.borderWidth = 3.0
+//            cell.layer.borderColor = UIColor.black.cgColor
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "extraCell", for: indexPath) as! MapAndAirCollectionViewCell
@@ -182,6 +186,10 @@ extension ViewController: UICollectionViewDataSource {
                  cell.imageView.image = UIImage(named: "air conditioner")
             }
             cell.roomExtraCellView.layer.cornerRadius = 10
+            cell.roomExtraCellView.layer.borderColor = UIColor.black.cgColor
+            cell.roomExtraCellView.layer.borderWidth = 3.0
+//            cell.layer.borderWidth = 3.0
+//            cell.layer.borderColor = UIColor.black.cgColor
             return cell
         }
     }

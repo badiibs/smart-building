@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,13 +34,14 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SdG-dp-9sK" firstAttribute="top" secondItem="Drg-t8-PUg" secondAttribute="top" id="IIU-7N-TcY"/>
                             <constraint firstItem="SdG-dp-9sK" firstAttribute="leading" secondItem="Drg-t8-PUg" secondAttribute="leading" id="SEh-dV-TJM"/>
                             <constraint firstAttribute="trailing" secondItem="imn-cI-8Xx" secondAttribute="trailing" constant="20" id="Z1s-FO-MbR"/>
                             <constraint firstItem="imn-cI-8Xx" firstAttribute="leading" secondItem="Drg-t8-PUg" secondAttribute="leading" constant="20" id="ZJ2-3e-7XZ"/>
+                            <constraint firstItem="imn-cI-8Xx" firstAttribute="centerX" secondItem="Drg-t8-PUg" secondAttribute="centerX" id="aAd-lO-Bru"/>
                             <constraint firstAttribute="trailing" secondItem="SdG-dp-9sK" secondAttribute="trailing" id="cgA-Gd-fc4"/>
                             <constraint firstItem="imn-cI-8Xx" firstAttribute="top" secondItem="SdG-dp-9sK" secondAttribute="bottom" constant="10" id="dCM-PD-Xh8"/>
                             <constraint firstAttribute="bottom" secondItem="imn-cI-8Xx" secondAttribute="bottom" constant="22" id="fk1-wA-xAu"/>

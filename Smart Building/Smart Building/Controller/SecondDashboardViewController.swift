@@ -19,10 +19,10 @@ class SecondDashboardViewController: UIViewController {
    //Weather Station variables
     var wStTemperature: Double = 0.0
     var wStHumidity: Double = 0.0
-    var wStDirection: Int = 0
-            var wStRainfall: Int = 0
-            var wStSpeed: Int = 0
-            var wStTime: String = ""
+    var wStDirection: String = ""
+    var wStRainfall: Int = 0
+    var wStSpeed: Int = 0
+    var wStTime: String = ""
     //Green Land variables
     var gLTemperature: String = ""
     var gLHumidity: String = ""
@@ -149,7 +149,8 @@ class SecondDashboardViewController: UIViewController {
                            wStHumidity = decodedData.object.RH
                            wStRainfall = decodedData.object.rainfall
                            wStSpeed = decodedData.object.speed
-                           wStDirection = decodedData.object.direction
+                          // wStDirection = decodedData.object.direction
+                           wStDirection = "Nord"
                            wStTime = decodedData.object.Time
             case "Landa LoRa":
                 let decodedData = try decoder.decode(LandaLora.self, from: deviceData)
@@ -193,7 +194,10 @@ extension SecondDashboardViewController: UITableViewDataSource{
         cell.firstCellIcon.image = UIImage(named: "\(cellIconsTable[indexPath.row])")
         cell.firstCellLabel.text = cellTitleLabel[indexPath.row]
         cell.firstCellValueLabel.text = String(cellDeviceValue[indexPath.row])
-        cell.firstCellView.layer.cornerRadius = 10
+        cell.firstCellView.layer.cornerRadius = 15
+        cell.firstCellView.layer.borderWidth = 3.0
+        cell.firstCellView.layer.borderColor = UIColor.black.cgColor
+        //cell.layer.borderColor = UIColor.black.cgColor
         return cell
     }
     
