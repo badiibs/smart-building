@@ -63,6 +63,7 @@ class SecondDashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = roomname
         updateCellArray()
         tableview.dataSource = self
         tableview.delegate = self

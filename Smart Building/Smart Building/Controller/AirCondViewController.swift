@@ -26,6 +26,8 @@ class AirCondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Air Conditioner"
+
         performRequest(urlString: urlGet)
         wait()
         updateButtonView()

@@ -20,6 +20,8 @@ class ChartViewController: UIViewController, ScrollableGraphViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Temperature"
+
       var addValue = 0
       addValue = Int(temperature)
         print(addValue)

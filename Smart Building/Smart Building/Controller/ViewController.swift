@@ -41,6 +41,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        self.navigationItem.title = "Dashboard"
+
         updateValuesArrays()
         wait()
         collectionView.dataSource = self
